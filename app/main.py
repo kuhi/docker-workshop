@@ -1,7 +1,3 @@
-import json
-
-import pprint
-
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
