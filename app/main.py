@@ -14,13 +14,15 @@ async def root():
 
 
 @app.get("/book/")
-async def book(name: str = None, year: int = None, author: str = None, limit: int = 100):
+async def book(
+    name: str = None, year: int = None, author: str = None, limit: int = 100
+):
     conn = connect(
         database=settings.database,
         host=settings.host,
         port=settings.port,
         user=settings.user,
-        password=settings.password
+        password=settings.password,
     )
     result = query_db(
         conn,
@@ -30,7 +32,7 @@ async def book(name: str = None, year: int = None, author: str = None, limit: in
         name=name,
         year=year,
         author=author,
-        limit=limit
+        limit=limit,
     )
     return json.dumps(result)
 
@@ -43,9 +45,12 @@ def db_info():
             host=settings.host,
             port=settings.port,
             user=settings.user,
-            password=settings.password
+            password=settings.password,
         )
-        return {"message": f"Connected to {settings.host}:{settings.port}/{settings.database}. User: {settings.user}."}
+        return {
+            "message": f"Connected to {settings.host}:{settings.port}/{settings.database}. User: {settings.user}."
+        }
     except Exception() as e:
-        return {"message":
-                f"{str(e)} {settings.host}:{settings.port}/{settings.database}. User: {settings.user}."}
+        return {
+            "message": f"{str(e)} {settings.host}:{settings.port}/{settings.database}. User: {settings.user}."
+        }
