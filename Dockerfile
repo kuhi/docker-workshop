@@ -1,13 +1,13 @@
-FROM mtr.devops.telekom.de/ai_incubator/python3.10:20230619
+# example Dockerfile for a Python application
 
-WORKDIR /app
+FROM python:3.11
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main_fastapi:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "app.main"]

@@ -1,24 +1,40 @@
 # Docker Workshop
 
-## 2023-06-23, Brno
+Welcome to the Docker Workshop repository. You'll find the exercises in the different branches as well as the solutions.
 
-This is a very poorly documented project, pretty much a copy-pasted notebook.  
-This is so sad.  
-It doesn't even have a `requirements.txt` file.
+![Welcome to the world of tomorrow](https://pbs.twimg.com/media/DUGXCHOVoAA-lRk.jpg)
 
-### What can we do?
-1. Create a virtual environment locally using Python 3.10.
-2. Investigate any `.py` files and install required packages.
-3. `pip freeze > requirements.txt` and you're halfway there. 
-4. Create a `Dockerfile`, you may use [this](https://mtr.devops.telekom.de/repository/ai_incubator/python3.10) image.
+## Resources
+* Workshop presentation slides (TODO)
+* Example of a [basic Dockerfile](https://github.com/kuhi/docker-workshop/blob/main/Dockerfile)
 
-### Where's the catch?
-Without modifying the code, you will not be able to "test" it locally, since
-it relies on a database connection with pre-existing schema and data.
+## Exercises
+To go through the exercises you need to clone the repository and switch to the respective branch.
+```
+git clone https://github.com/kuhi/docker-workshop
+cd docker-workshop
+```
 
-### Creating a database and loading data
-1. Log into your databse using the deployed pgAdmin (in browser).
-2. Run database.sql, book.sql, database.sql in a/an (depending on your pronunciation of SQL)
-sql window (in that order).
 
+### Exercise 1
+First exercise can be found in the [`exercise1` branch](https://github.com/kuhi/docker-workshop/tree/exercise1).
+
+```
+git checkout exercise1
+```
+
+After you're done, see the solution by switching to the [`exercise1-solution` branch](https://github.com/kuhi/docker-workshop/tree/exercise1-solution).
+
+### Exercise 2
+First exercise can be found in the [`exercise2` branch](https://github.com/kuhi/docker-workshop/tree/exercise2). 
+
+```
+git checkout exercise2
+```
+
+After you're done, see the solution by switching to the [`exercise2-solution` branch](https://github.com/kuhi/docker-workshop/tree/exercise2-solution).
+
+## Authors
+* Jakub Kohút (kuhi)
+* David Beran (hom3r)
 
