@@ -4,10 +4,8 @@ Welcome to the Docker Workshop repository. You'll find the exercises in the diff
 
 ![Welcome to the world of tomorrow](https://pbs.twimg.com/media/DUGXCHOVoAA-lRk.jpg)
 
-### [Slides](docker-workshop.pdf)
-
 ## Resources
-* Workshop presentation slides (TODO)
+* Workshop [presentation slides](docker-workshop.pdf)
 * Example of a [basic Dockerfile](https://github.com/kuhi/docker-workshop/blob/main/Dockerfile)
 
 ## Exercises
