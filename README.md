@@ -2,7 +2,8 @@
 
 ## Solution
 1. First you need to create a Dockerfile. This Dockerfile is very similar to the one you created in the first exercise.
-2. You need to figure out what dependencies there are and put them in the `requirements.txt` file.
+2. You need to figure out what dependencies are needed and put them in the `requirements.txt` file.
+3. You have to put the correct configuration into the `.env` file.
 
 -------------
 
@@ -34,8 +35,5 @@ Without modifying the code, you will not be able to "test" it locally, since
 it relies on a database connection with pre-existing schema and data.
 
 ### Creating a database and loading data
-1. Log into your databse using the deployed pgAdmin (in browser).
-2. Run database.sql, book.sql, database.sql in a/an (depending on your pronunciation of SQL)
-sql window (in that order).
-
+The Docker Compose configuration automatically creates and fills the database for you. After the Postgres database starts, it runs the `initdb/initdb.sql`, which creates a schema, a table and fills it with some data.
 
